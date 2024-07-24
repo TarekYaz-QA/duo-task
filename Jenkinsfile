@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                docker build -t tarekyaz/duo-deploy-flask:latest -t tarekyaz/duo-deploy-flask:v$BUILD_NUMBER .
+                docker build -f Dockerfile.flask -t tarekyaz/duo-deploy-flask:latest -t tarekyaz/duo-deploy-flask:v$BUILD_NUMBER .
                 '''
             }
         }
